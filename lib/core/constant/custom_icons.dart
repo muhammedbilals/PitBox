@@ -49,4 +49,10 @@ class CustomIcons {
   static SvgPicture share = SvgPicture.asset(
     "assets/icons/share.svg",
   );
+  static SvgPicture arrowLeft = SvgPicture.asset(
+    "assets/icons/arrow_left.svg",
+  );
+  static SvgPicture arrowRight = SvgPicture.asset(
+    "assets/icons/arrow_right.svg",
+  );
 }
