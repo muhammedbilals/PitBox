@@ -11,17 +11,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        fontFamily:
-            GoogleFonts.montserrat().fontFamily,
-        primarySwatch: Colors.red,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello myreeee'),
+        theme: ThemeData(
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+          primarySwatch: Colors.red,
         ),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        home: const Scaffold(
+          body: Center(
+            child: Text(
+              'Hello World Robot',
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
+        ));
   }
 }
