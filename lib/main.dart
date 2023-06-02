@@ -13,7 +13,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('Hello World'),
+          child: Text(
+            'Hello World Robot',
+            style: TextStyle(color: Colors.black),
+          ),
         ),
       ),
     );
