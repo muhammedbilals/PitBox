@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pit_box/core/constant/size.dart';
-import 'package:pit_box/features/feed_section/data/constant/colors.dart';
+import 'package:pit_box/core/constant/colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
