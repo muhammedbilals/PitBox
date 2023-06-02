@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                             child:
                                 Image.asset('assets/images/skysportslogo.png'),
                           ),
-                           Padding(
+                          const Padding(
                             padding:
                                 EdgeInsets.symmetric(horizontal: bRadius10),
                             child: Text(
@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                           )
                         ],
                       ),
-                       Padding(
+                      const Padding(
                         padding: EdgeInsets.all(bRadius10),
                         child: Text(
                           'F1 announces the cancellation of the Emilia Romagna Grand Prix',
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.w900),
                         ),
                       ),
-                       Padding(
+                      const Padding(
                         padding: EdgeInsets.only(left: bRadius10),
                         child: Text(
                           'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
