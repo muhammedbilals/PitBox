@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
                   height: size.height * 0.5,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: colorgray),
+                      color: colorgrey),
                   child: Column(
                     children: [
                       Padding(
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: fsize12, fontWeight: FontWeight.w200),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
