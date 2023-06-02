@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(
           
-          fontFamily: GoogleFonts.montserrat().fontFamily, colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(background: colorblack),
+          fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         debugShowCheckedModeBanner: false,
         home: const HomePage());

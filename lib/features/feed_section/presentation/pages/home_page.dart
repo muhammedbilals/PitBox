@@ -31,12 +31,36 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset('assets/images/newsimg.png')),
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: bRadius10),
+                            child:
+                                Image.asset('assets/images/skysportslogo.png'),
+                          ),
+                          const Padding(
+                            padding:
+                                EdgeInsets.symmetric(horizontal: bRadius10),
+                            child: Text(
+                              '12 Days ago',
+                              style: TextStyle(
+                                  color: colorwhite,
+                                  fontSize: fsize12,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                          )
+                        ],
+                      ),
                       const Padding(
                         padding: EdgeInsets.all(bRadius10),
                         child: Text(
                           'F1 announces the cancellation of the Emilia Romagna Grand Prix',
                           style: TextStyle(
-                              fontSize: fsize15, fontWeight: FontWeight.w900),
+                              color: colorwhite,
+                              fontSize: fsize15,
+                              fontWeight: FontWeight.w900),
                         ),
                       ),
                       const Padding(
@@ -44,7 +68,9 @@ class HomePage extends StatelessWidget {
                         child: Text(
                           'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
                           style: TextStyle(
-                              fontSize: fsize12, fontWeight: FontWeight.w200),
+                              color: colorwhite,
+                              fontSize: fsize12,
+                              fontWeight: FontWeight.w200),
                         ),
                       )
                     ],
