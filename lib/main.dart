@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pit_box/core/constant/colors.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
 
 void main() {
@@ -14,7 +13,6 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
-          
           fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         debugShowCheckedModeBanner: false,
