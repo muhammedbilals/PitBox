@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pit_box/core/constant/custom_icons.dart';
 import 'package:pit_box/core/constant/size.dart';
 import 'package:pit_box/core/constant/colors.dart';
+import 'package:pit_box/core/constant/sized_box.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
                             child:
                                 Image.asset('assets/images/skysportslogo.png'),
                           ),
-                           Padding(
+                          const Padding(
                             padding:
                                 EdgeInsets.symmetric(horizontal: bRadius10),
                             child: Text(
@@ -50,10 +52,16 @@ class HomePage extends StatelessWidget {
                                   fontSize: fsize12,
                                   fontWeight: FontWeight.w900),
                             ),
+                          ),
+                          const Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: bRadius10),
+                            child: GestureDetector(child: CustomIcons.dislike),
                           )
                         ],
                       ),
-                       Padding(
+                      const Padding(
                         padding: EdgeInsets.all(bRadius10),
                         child: Text(
                           'F1 announces the cancellation of the Emilia Romagna Grand Prix',
@@ -63,7 +71,7 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.w900),
                         ),
                       ),
-                       Padding(
+                      const Padding(
                         padding: EdgeInsets.only(left: bRadius10),
                         child: Text(
                           'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
@@ -73,6 +81,68 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.w200),
                         ),
                       ),
+                      hBox12,
+                      Row(
+                        children: [
+                          IconButton(onPressed: () {}, icon: CustomIcons.like),
+                          SizedBox(
+                            width: size.width * 0.03,
+                            child: const Text(
+                              '1',
+                              style: TextStyle(
+                                  color: colorwhite,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          SizedBox(
+                            child: IconButton(
+                                onPressed: () {}, icon: CustomIcons.dislike),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.03,
+                            child: const Text(
+                              '2',
+                              style: TextStyle(
+                                  color: colorwhite,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: CustomIcons.comment),
+                          const Text(
+                            '32',
+                            style: TextStyle(
+                                color: colorwhite,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                                left: size.width * 0.12, right: 10),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: colorgreen),
+                              width: size.width * 0.24,
+                              height: size.width * 0.07,
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'READ MORE',
+                                    style: TextStyle(
+                                        color: colorwhite,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),
