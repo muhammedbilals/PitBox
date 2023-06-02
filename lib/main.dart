@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
+import 'package:pit_box/utils/bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,6 +17,6 @@ class MainApp extends StatelessWidget {
           fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         debugShowCheckedModeBanner: false,
-        home: const HomePage());
+        home: const BottomNavBar());
   }
 }
