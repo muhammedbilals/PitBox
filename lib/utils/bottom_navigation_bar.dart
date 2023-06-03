@@ -36,30 +36,28 @@ class _BottomNavBarState extends State<BottomNavBar> {
             icon: navbarIndex != 0
                 ? CustomIcons.document
                 : CustomIcons.documentFilled,
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: navbarIndex != 1
-                ? CustomIcons.message
-                : CustomIcons.messageFilled,
-            label: 'Messages',
+            tooltip: 'Home',
+            label: "",
           ),
           BottomNavigationBarItem(
             icon:
-                navbarIndex != 2 ? CustomIcons.award : CustomIcons.awardFilled,
-            label: 'Categories',
+                navbarIndex != 1 ? CustomIcons.award : CustomIcons.awardFilled,
+            tooltip: 'Championship',
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: navbarIndex != 2
+                ? CustomIcons.calender
+                : CustomIcons.calenderFilled,
+            tooltip: 'Categories',
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: navbarIndex != 3
-                ? CustomIcons.calender
-                : CustomIcons.calenderFilled,
-            label: 'Categories',
-          ),
-          BottomNavigationBarItem(
-            icon: navbarIndex != 4
                 ? CustomIcons.profile
                 : CustomIcons.profileFilled,
-            label: 'Profile',
+            tooltip: 'Profile',
+            label: "",
           ),
         ],
         currentIndex: navbarIndex,
