@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pit_box/core/constant/colors.dart';
-import 'package:pit_box/core/constant/custom_icons.dart';
-import 'package:pit_box/core/constant/size.dart';
-import 'package:pit_box/utils/widgets/AppBarWidget.dart';
+import 'package:pit_box/utils/widgets/app_bar_widget.dart';
+import '../../../../core/constant/colors.dart';
+import '../../../../core/constant/custom_icons.dart';
+import '../../../../core/constant/size.dart';
 
 class NewsDetailedScreen extends StatelessWidget {
   const NewsDetailedScreen({super.key});
