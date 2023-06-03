@@ -13,7 +13,7 @@ class ChangeThemeButtonWidget extends StatefulWidget {
 }
 
 class _ChangeThemeButtonWidgetState extends State<ChangeThemeButtonWidget> {
-  bool isDarkMode = false;
+  bool isDarkMode = true;
 
   @override
   void initState() {
