@@ -17,9 +17,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   late int navbarIndex = widget.pageIndex;
 
   final _pages = [
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
+     HomePage(),
+     HomePage(),
+     HomePage(),
     const ProfileSceen(),
   ];
 
