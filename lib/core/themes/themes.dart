@@ -12,7 +12,7 @@ final appThemeData = {
     canvasColor: const Color.fromARGB(255, 20, 20, 20),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
-        fontSize: 42,
+        fontSize: 35,
         fontWeight: FontWeight.w900,
         color: Color.fromARGB(255, 255, 0, 0),
       ),
