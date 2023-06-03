@@ -13,7 +13,6 @@ class NewsDetailedScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorblack,
         appBar: const PreferredSize(
             preferredSize: Size.fromHeight(50),
             child: AppBarWidget(title: 'My Orders')),
