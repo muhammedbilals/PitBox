@@ -13,7 +13,6 @@ class HomePage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).primaryColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,7 +34,7 @@ class HomePage extends StatelessWidget {
                       height: size.height * 0.5,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: colorgrey),
+                          color: Theme.of(context).canvasColor),
                       child: Column(
                         children: [
                           Padding(
@@ -64,7 +63,6 @@ class HomePage extends StatelessWidget {
                                 child: Text(
                                   '12 Days ago',
                                   style: TextStyle(
-                                      color: colorwhite,
                                       fontSize: fsize12,
                                       fontWeight: FontWeight.w900),
                                 ),
@@ -83,7 +81,6 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               'F1 announces the cancellation of the Emilia Romagna Grand Prix',
                               style: TextStyle(
-                                  color: colorwhite,
                                   fontSize: fsize15,
                                   fontWeight: FontWeight.w900),
                             ),
@@ -93,7 +90,6 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
                               style: TextStyle(
-                                  color: colorwhite,
                                   fontSize: fsize12,
                                   fontWeight: FontWeight.w200),
                             ),
@@ -108,7 +104,6 @@ class HomePage extends StatelessWidget {
                                 child: const Text(
                                   '1',
                                   style: TextStyle(
-                                      color: colorwhite,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -123,7 +118,6 @@ class HomePage extends StatelessWidget {
                                 child: const Text(
                                   '2',
                                   style: TextStyle(
-                                      color: colorwhite,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -133,9 +127,7 @@ class HomePage extends StatelessWidget {
                               const Text(
                                 '32',
                                 style: TextStyle(
-                                    color: colorwhite,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold),
+                                    fontSize: 16, fontWeight: FontWeight.bold),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
@@ -152,7 +144,6 @@ class HomePage extends StatelessWidget {
                                       Text(
                                         'READ MORE',
                                         style: TextStyle(
-                                            color: colorwhite,
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -172,7 +163,8 @@ class HomePage extends StatelessWidget {
                 width: size.width * 0.95,
                 height: size.height * 0.52,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10), color: colorgrey),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Theme.of(context).canvasColor),
                 child: Column(
                   children: [
                     Row(
@@ -180,25 +172,21 @@ class HomePage extends StatelessWidget {
                       children: [
                         const Padding(
                           padding: EdgeInsets.all(bRadius10),
-                          child: CircleAvatar(
-                            backgroundColor: colorblack,
-                          ),
+                          child: CircleAvatar(),
                         ),
-                        Column(
+                        const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               'Muhammed Bilal',
                               style: TextStyle(
-                                  color: colorwhite,
                                   fontSize: fsize15,
                                   fontWeight: FontWeight.w900),
                             ),
                             Text(
                               '@maxhater07',
                               style: TextStyle(
-                                  color: colorwhite.withOpacity(0.7),
                                   fontSize: fsize12,
                                   fontWeight: FontWeight.w900),
                             ),
@@ -219,7 +207,6 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'FOLLOW',
                                   style: TextStyle(
-                                      color: colorwhite,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -234,9 +221,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'F1 announces the cancellation of the Emilia Romagna Grand Prix',
                         style: TextStyle(
-                            color: colorwhite,
-                            fontSize: fsize15,
-                            fontWeight: FontWeight.w900),
+                            fontSize: fsize15, fontWeight: FontWeight.w900),
                       ),
                     ),
                     Padding(
@@ -259,9 +244,7 @@ class HomePage extends StatelessWidget {
                           child: const Text(
                             '1',
                             style: TextStyle(
-                                color: colorwhite,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                         SizedBox(
@@ -273,18 +256,14 @@ class HomePage extends StatelessWidget {
                           child: const Text(
                             '2',
                             style: TextStyle(
-                                color: colorwhite,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                         IconButton(onPressed: () {}, icon: CustomIcons.comment),
                         const Text(
                           '32',
                           style: TextStyle(
-                              color: colorwhite,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
+                              fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                       ],
                     )

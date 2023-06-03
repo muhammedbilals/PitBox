@@ -30,7 +30,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 0,
-        backgroundColor: colorblack,
+        backgroundColor: Theme.of(context).primaryColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: navbarIndex != 0
@@ -61,10 +61,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
         ],
         currentIndex: navbarIndex,
-        selectedItemColor: colorwhite,
         showUnselectedLabels: true,
         iconSize: 20,
-        unselectedItemColor: Colors.grey,
         selectedLabelStyle: const TextStyle(color: colorblack, fontSize: 12),
         unselectedLabelStyle:
             TextStyle(color: colorblack.withOpacity(0.5), fontSize: 12),
