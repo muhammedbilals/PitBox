@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pit_box/core/constant/colors.dart';
 import 'package:pit_box/core/constant/custom_icons.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -33,7 +34,7 @@ class AppBarWidget extends StatelessWidget {
           Center(
             child: Text(
               title,
-              style: const TextStyle(fontSize: 20),
+              style: const TextStyle(color: colorwhite, fontSize: 20),
             ),
           ),
           const Spacer(),
