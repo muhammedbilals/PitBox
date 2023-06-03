@@ -9,6 +9,7 @@ final appThemeData = {
     scaffoldBackgroundColor: Colors.black,
     primaryColor: Colors.black,
     primaryColorLight: Colors.white.withOpacity(0.7),
+    secondaryHeaderColor: Colors.white,
     canvasColor: const Color.fromARGB(255, 20, 20, 20),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
@@ -97,6 +98,7 @@ final appThemeData = {
     fontFamily: GoogleFonts.montserrat(color: Colors.black).fontFamily,
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.white,
+    secondaryHeaderColor: Colors.black,
     textTheme: const TextTheme(
       displayLarge: TextStyle(
         fontSize: 48,
