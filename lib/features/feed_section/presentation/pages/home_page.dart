@@ -6,8 +6,14 @@ import 'package:pit_box/core/constant/sized_box.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/news_detailed_screen.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+   HomePage({super.key});
+  List driverImage = [
+    'assets/images/drivers/maxverstappen.png',
+    'assets/images/drivers/fernandoalonso.png',
+    'assets/images/drivers/lweishamilton.png',
+    'assets/images/drivers/chalrlesleclerc.png',
+    'assets/images/drivers/sergioperes.png'
+  ];
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
