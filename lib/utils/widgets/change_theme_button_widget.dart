@@ -23,9 +23,8 @@ class _ChangeThemeButtonWidgetState extends State<ChangeThemeButtonWidget> {
 
   void getSharedPrefValue() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    isDarkMode = prefs.getBool('isDarkMode') ?? false;
     setState(() {
-      isDarkMode;
+      isDarkMode = prefs.getBool('isDarkMode') ?? false;
     });
   }
 

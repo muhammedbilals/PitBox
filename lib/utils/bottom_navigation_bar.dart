@@ -4,6 +4,8 @@ import 'package:pit_box/core/constant/custom_icons.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
 import 'package:pit_box/features/profile_section/presentation/profile_screen.dart';
 
+import '../features/championship_section/presentation/championship_page.dart';
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key, this.pageIndex = 0});
 
@@ -17,8 +19,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   late int navbarIndex = widget.pageIndex;
 
   final _pages = [
-     HomePage(),
-     HomePage(),
+    HomePage(),
+    ChampionShipScreen(),
      HomePage(),
     const ProfileSceen(),
   ];
