@@ -6,14 +6,8 @@ import 'package:pit_box/core/constant/sized_box.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/news_detailed_screen.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-  List driverImage = [
-    'assets/images/drivers/maxverstappen.png',
-    'assets/images/drivers/fernandoalonso.png',
-    'assets/images/drivers/lweishamilton.png',
-    'assets/images/drivers/chalrlesleclerc.png',
-    'assets/images/drivers/sergioperes.png'
-  ];
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -39,129 +33,146 @@ class HomePage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: bRadius10),
-                                child: Text(
-                                  '02 - 04 JUN',
-                                  style: Theme.of(context).textTheme.titleSmall,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: bRadius10),
-                                child: Text(
-                                  'SPAIN 2023',
-                                  style:
-                                      Theme.of(context).textTheme.headlineLarge,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: bRadius10),
-                                child: Text(
-                                  'PRACTICE 3',
-                                  style: Theme.of(context).textTheme.titleSmall,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  left: bRadius5,
-                                ),
-                                child: Row(
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: bRadius5),
-                                          child: Text(
-                                            '02',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .displayLarge,
-                                          ),
-                                        ),
-                                        Text(
-                                          'HRS',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelSmall,
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      ':',
+                          Flexible(
+                            flex: 6,
+                            child: FittedBox(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: bRadius10),
+                                    child: Text(
+                                      '02 - 04 JUN',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .displaySmall,
+                                          .titleSmall,
                                     ),
-                                    Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: bRadius5),
-                                          child: Text(
-                                            '23',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .displayLarge,
-                                          ),
-                                        ),
-                                        Text(
-                                          'MIN',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelSmall,
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      ':',
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: bRadius10),
+                                    child: Text(
+                                      'SPAIN 2023',
                                       style: Theme.of(context)
                                           .textTheme
-                                          .displaySmall,
+                                          .headlineLarge,
                                     ),
-                                    Column(
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: bRadius10),
+                                    child: Text(
+                                      'PRACTICE 3',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleSmall,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: bRadius5),
+                                    child: Row(
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: bRadius5),
-                                          child: Text(
-                                            '37',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .displayLarge,
-                                          ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: bRadius5),
+                                              child: Text(
+                                                '02',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .displayLarge,
+                                              ),
+                                            ),
+                                            Text(
+                                              'HRS',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .labelSmall,
+                                            ),
+                                          ],
                                         ),
                                         Text(
-                                          'SEC',
+                                          ':',
                                           style: Theme.of(context)
                                               .textTheme
-                                              .labelSmall,
+                                              .displaySmall,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: bRadius5),
+                                              child: Text(
+                                                '23',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .displayLarge,
+                                              ),
+                                            ),
+                                            Text(
+                                              'MIN',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .labelSmall,
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          ':',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .displaySmall,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: bRadius5),
+                                              child: Text(
+                                                '37',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .displayLarge,
+                                              ),
+                                            ),
+                                            Text(
+                                              'SEC',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .labelSmall,
+                                            ),
+                                          ],
                                         ),
                                       ],
                                     ),
-                                  ],
-                                ),
-                              )
-                            ],
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                           Flexible(
+                            flex: 7,
                             child: Padding(
                               padding: const EdgeInsets.all(bRadius10),
                               child: SizedBox(
-                                  height: size.width * 0.35,
-                                  width: size.width * 0.35,
+                                height: size.width * 0.36,
+                                width: size.width * 0.4,
+                                child: FittedBox(
+                                  fit: BoxFit.contain,
                                   child: Image.asset(
-                                      'assets/images/spaintrack.png')),
+                                      'assets/images/spaintrack.png'),
+                                ),
+                              ),
                             ),
                           )
                         ],
@@ -169,6 +180,31 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              Row(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.red,
+                      height: 100,
+                    ),
+                  ),
+                  Flexible(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.green,
+                      height: 100,
+                    ),
+                  ),
+                  Flexible(
+                    flex: 5,
+                    child: Container(
+                      color: Colors.blue,
+                      height: 100,
+                    ),
+                  ),
+                ],
               ),
               GestureDetector(
                 onTap: () {
