@@ -18,6 +18,25 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Container(
+                width: size.width * 0.95,
+                height: size.height * 0.2,
+                decoration: BoxDecoration(
+                    color: colorgrey,
+                    borderRadius: BorderRadius.circular(bRadius10)),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const Column(
+                          children: [],
+                        ),
+                        Image.asset('assets/images/Spaintack.png')
+                      ],
+                    )
+                  ],
+                ),
+              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
