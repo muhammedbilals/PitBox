@@ -5,16 +5,16 @@ enum AppTheme { darkTheme, lightTheme }
 
 final appThemeData = {
   AppTheme.darkTheme: ThemeData(
-    fontFamily: GoogleFonts.montserrat(color: Colors.white).fontFamily,
+    fontFamily: 'Montserrat',
     scaffoldBackgroundColor: Colors.black,
     primaryColor: Colors.black,
     primaryColorLight: Colors.white.withOpacity(0.7),
-    canvasColor: Colors.black87,
+    canvasColor: const Color.fromARGB(255, 20, 20, 20),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
-        fontSize: 48,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
+        fontSize: 42,
+        fontWeight: FontWeight.w900,
+        color: Color.fromARGB(255, 255, 0, 0),
       ),
       displayMedium: TextStyle(
         fontSize: 36,
@@ -53,7 +53,7 @@ final appThemeData = {
       ),
       titleSmall: TextStyle(
         fontSize: 16,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w300,
         color: Colors.white,
       ),
       bodyLarge: TextStyle(
@@ -79,7 +79,7 @@ final appThemeData = {
         color: Colors.white,
       ),
       labelSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 11,
         fontWeight: FontWeight.bold,
         color: Colors.white,
       ),

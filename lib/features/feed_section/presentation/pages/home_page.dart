@@ -17,23 +17,149 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 100,
+              ),
               Container(
                 width: size.width * 0.95,
-                height: size.height * 0.2,
+                height: size.height * 0.21,
                 decoration: BoxDecoration(
-                    color: colorgrey,
+                    color: Theme.of(context).canvasColor,
                     borderRadius: BorderRadius.circular(bRadius10)),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        const Column(
-                          children: [],
-                        ),
-                        Image.asset('assets/images/Spaintack.png')
-                      ],
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(bRadius5),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: bRadius10),
+                                child: Text(
+                                  '02 - 04 JUN',
+                                  style: Theme.of(context).textTheme.titleSmall,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: bRadius10),
+                                child: Text(
+                                  'SPAIN 2023',
+                                  style:
+                                      Theme.of(context).textTheme.headlineLarge,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: bRadius10),
+                                child: Text(
+                                  'PRACTICE 3',
+                                  style: Theme.of(context).textTheme.titleSmall,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: bRadius5,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: bRadius5),
+                                          child: Text(
+                                            '02',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .displayLarge,
+                                          ),
+                                        ),
+                                        Text(
+                                          'HRS',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .labelSmall,
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      ':',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: bRadius5),
+                                          child: Text(
+                                            '23',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .displayLarge,
+                                          ),
+                                        ),
+                                        Text(
+                                          'MIN',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .labelSmall,
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      ':',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: bRadius5),
+                                          child: Text(
+                                            '37',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .displayLarge,
+                                          ),
+                                        ),
+                                        Text(
+                                          'SEC',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .labelSmall,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(bRadius10),
+                            child: SizedBox(
+                                height: size.width * 0.35,
+                                width: size.width * 0.35,
+                                child: Image.asset(
+                                    'assets/images/spaintrack.png')),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
               GestureDetector(
@@ -52,7 +178,7 @@ class HomePage extends StatelessWidget {
                       width: size.width * 0.95,
                       height: size.height * 0.5,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(bRadius10),
                           color: Theme.of(context).canvasColor),
                       child: Column(
                         children: [
@@ -83,7 +209,7 @@ class HomePage extends StatelessWidget {
                                   '12 Days ago',
                                   style: TextStyle(
                                       fontSize: fsize12,
-                                      fontWeight: FontWeight.w900),
+                                      fontWeight: FontWeight.w500),
                                 ),
                               ),
                               const Spacer(),
@@ -101,7 +227,7 @@ class HomePage extends StatelessWidget {
                               'F1 announces the cancellation of the Emilia Romagna Grand Prix',
                               style: TextStyle(
                                   fontSize: fsize15,
-                                  fontWeight: FontWeight.w900),
+                                  fontWeight: FontWeight.w600),
                             ),
                           ),
                           const Padding(
@@ -110,7 +236,7 @@ class HomePage extends StatelessWidget {
                               'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
                               style: TextStyle(
                                   fontSize: fsize12,
-                                  fontWeight: FontWeight.w200),
+                                  fontWeight: FontWeight.w400),
                             ),
                           ),
                           hBox12,
@@ -150,7 +276,7 @@ class HomePage extends StatelessWidget {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
-                                    left: size.width * 0.12, right: 10),
+                                    left: size.width * 0.155, right: 10),
                                 child: Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
@@ -201,13 +327,13 @@ class HomePage extends StatelessWidget {
                               'Muhammed Bilal',
                               style: TextStyle(
                                   fontSize: fsize15,
-                                  fontWeight: FontWeight.w900),
+                                  fontWeight: FontWeight.w700),
                             ),
                             Text(
                               '@maxhater07',
                               style: TextStyle(
                                   fontSize: fsize12,
-                                  fontWeight: FontWeight.w900),
+                                  fontWeight: FontWeight.w500),
                             ),
                           ],
                         ),
@@ -240,7 +366,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'F1 announces the cancellation of the Emilia Romagna Grand Prix',
                         style: TextStyle(
-                            fontSize: fsize15, fontWeight: FontWeight.w900),
+                            fontSize: fsize15, fontWeight: FontWeight.w600),
                       ),
                     ),
                     Padding(

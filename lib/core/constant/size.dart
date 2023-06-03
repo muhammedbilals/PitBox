@@ -1,6 +1,7 @@
 
 //border radius
 const double bRadius10 = 10.0;
+const double bRadius5 = 5.0;
 
 
 //font size
