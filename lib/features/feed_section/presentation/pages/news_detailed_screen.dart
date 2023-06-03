@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pit_box/utils/widgets/AppBarWidget.dart';
+import 'package:pit_box/utils/widgets/app_bar_widget.dart';
 
 class NewsDetailedScreen extends StatelessWidget {
   const NewsDetailedScreen({super.key});
