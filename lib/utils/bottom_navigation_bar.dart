@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pit_box/core/constant/colors.dart';
 import 'package:pit_box/core/constant/custom_icons.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
+import 'package:pit_box/features/profile_section/presentation/profile_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key, this.pageIndex = 0});
@@ -19,8 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const HomePage(),
     const HomePage(),
     const HomePage(),
-    const HomePage(),
-    const HomePage(),
+    const ProfileSceen(),
   ];
 
   @override

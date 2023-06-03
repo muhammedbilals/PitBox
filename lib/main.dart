@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pit_box/utils/bottom_navigation_bar.dart';
-import 'package:provider/provider.dart';
-
-import 'core/themes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,16 +11,21 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      builder: (context, _) {
-        return MaterialApp(
-            themeMode: ThemeProvider.themeMode,
-            theme: MyThemes.lightTheme,
-            darkTheme: MyThemes.lightTheme,
-            debugShowCheckedModeBanner: false,
-            home: const BottomNavBar());
-      },
-    );
+    return MaterialApp(
+        theme: ThemeData(
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+          // colorScheme:  ColorScheme(
+          //   onPrimary: colorblack,
+          //   onSecondary: colorwhite,
+          //   error: colorgreen,
+          //   onError: colorgreen,
+          //   onBackground: ,
+          //   secondary: colorwhite,
+          //     primary: colorblack,
+          //     brightness: Brightness.dark,
+          //     background: colorblack),
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const BottomNavBar());
   }
 }

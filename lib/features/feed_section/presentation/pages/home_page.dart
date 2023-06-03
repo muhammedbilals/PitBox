@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorblack,
+        backgroundColor: Theme.of(context).primaryColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Center(
                     child: Container(
-                      width: size.width * 0.9,
+                      width: size.width * 0.95,
                       height: size.height * 0.5,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
