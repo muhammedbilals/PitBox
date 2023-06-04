@@ -20,6 +20,8 @@ dependencies:
   dartz: ^0.10.1
   connectivity_plus: ^4.0.1
   http: ^1.0.0
+  dio: ^5.1.2
+  html: ^0.15.3
 
 dev_dependencies:
   flutter_test:
