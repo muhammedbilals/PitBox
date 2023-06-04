@@ -10,7 +10,7 @@ class GetNews implements UseCase<NewsFeed, NoParams> {
   GetNews(this.repository);
   @override
   Future<Either<Failure, NewsFeed>> call(NoParams params) async {
-    return await repository.getnews();
+    return await repository.getNews();
   }
 }
 
