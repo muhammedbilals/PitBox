@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pit_box/utils/widgets/app_bar_widget.dart';
 import '../../../../core/constant/colors.dart';
-import '../../../../core/constant/custom_icons.dart';
 import '../../../../core/constant/size.dart';
+import '../../../../core/icons/custom_icon_icons.dart';
 
 class NewsDetailedScreen extends StatelessWidget {
   const NewsDetailedScreen({super.key});
@@ -46,7 +46,7 @@ class NewsDetailedScreen extends StatelessWidget {
                 const Spacer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: bRadius10),
-                  child: GestureDetector(child: CustomIcons.share),
+                  child: GestureDetector(child: Icon(CustomIcon.like)),
                 )
               ],
             ),
