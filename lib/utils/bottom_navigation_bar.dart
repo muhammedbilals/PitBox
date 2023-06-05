@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pit_box/core/constant/colors.dart';
-import 'package:pit_box/core/constant/custom_icons.dart';
 import 'package:pit_box/features/calender_section/pages/race_calender_page.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
 import 'package:pit_box/features/profile_section/presentation/profile_screen.dart';
@@ -37,28 +37,67 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: navbarIndex != 0
-                ? CustomIcons.document
-                : CustomIcons.documentFilled,
+                ? SvgPicture.asset("assets/icons/document.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .unselectedItemColor!)
+                : SvgPicture.asset(
+                    "assets/icons/document_filled.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .selectedItemColor,
+                  ),
             tooltip: 'Home',
             label: "",
           ),
           BottomNavigationBarItem(
-            icon:
-                navbarIndex != 1 ? CustomIcons.award : CustomIcons.awardFilled,
+            icon: navbarIndex != 1
+                ? SvgPicture.asset(
+                    "assets/icons/award.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .unselectedItemColor,
+                  )
+                : SvgPicture.asset(
+                    "assets/icons/award_filled.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .selectedItemColor,
+                  ),
             tooltip: 'Championship',
             label: "",
           ),
           BottomNavigationBarItem(
             icon: navbarIndex != 2
-                ? CustomIcons.calender
-                : CustomIcons.calenderFilled,
+                ? SvgPicture.asset(
+                    "assets/icons/calender.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .unselectedItemColor,
+                  )
+                : SvgPicture.asset(
+                    "assets/icons/calender_filled.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .selectedItemColor,
+                  ),
             tooltip: 'Categories',
             label: "",
           ),
           BottomNavigationBarItem(
             icon: navbarIndex != 3
-                ? CustomIcons.profile
-                : CustomIcons.profileFilled,
+                ? SvgPicture.asset(
+                    "assets/icons/profile.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .unselectedItemColor,
+                  )
+                : SvgPicture.asset(
+                    "assets/icons/profile_filled.svg",
+                    color: Theme.of(context)
+                        .bottomNavigationBarTheme
+                        .selectedItemColor,
+                  ),
             tooltip: 'Profile',
             label: "",
           ),

@@ -11,14 +11,14 @@ class RaceCalenderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    return SafeArea(
+    return const SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-            preferredSize: size,
-            child: const AppBarWidget(
+            preferredSize: Size.fromHeight(60),
+            child: AppBarWidget(
               title: '',
             )),
-        body: const Center(
+        body: Center(
           child: Column(
             children: [
               Text(
