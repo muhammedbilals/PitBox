@@ -21,3 +21,11 @@ class Loaded extends NewsFeedState {
   @override
   List<Object> get props => [newsFeed];
 }
+class Error extends NewsFeedState {
+  final String message;
+
+   Error({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}

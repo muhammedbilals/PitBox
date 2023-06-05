@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pit_box/core/constant/size.dart';
 import 'package:pit_box/core/constant/sized_box.dart';
 import 'package:stroke_text/stroke_text.dart';
 
@@ -29,123 +30,89 @@ class ChampionShipScreen extends StatelessWidget {
                   "All Drivers",
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Flexible(
-                      flex: 1,
-                      child: SizedBox(
-                        height: size.height * 0.15,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
+                Placeholder(
+                  child: SizedBox(
+                    width: size.width,
+                    height: size.width * 0.4,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        wBox8,
+                        Padding(
+                          padding: const EdgeInsets.all(bRadius10),
+                          child: SizedBox(
+                            height: size.width * 0.10,
+                            width: size.width * 0.10,
+                            child: Text(
                               "1",
                               style: Theme.of(context).textTheme.displayMedium,
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
-                    wBox8,
-                    Expanded(
-                      flex: 7,
-                      child: SizedBox(
-                        child: SizedBox(
-                          width: double.infinity,
-                          child: FittedBox(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            StrokeText(
+                              text: "MAX",
+                              strokeColor:
+                                  Theme.of(context).secondaryHeaderColor,
+                              textStyle: TextStyle(
+                                  fontSize: 18,
+                                  color: Theme.of(context).primaryColor),
+                              strokeWidth: 3,
+                            ),
+                            const Column(
                               children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    StrokeText(
-                                      text: "MAX",
-                                      strokeColor: Theme.of(context)
-                                          .secondaryHeaderColor,
-                                      textStyle: TextStyle(
-                                          fontSize: 24,
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                      strokeWidth: 3,
-                                    ),
-                                    const Column(
-                                      children: [
-                                        Text(
-                                          "VERSTAPPEN",
-                                          style: TextStyle(
-                                            fontSize: 36,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        Divider(
-                                          color: Colors.amber,
-                                          thickness: 5,
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                Text(
+                                  "VERSTAPPEN",
+                                  style: TextStyle(
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                                const Text("RedBull Racing"),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          "265",
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .displayMedium,
-                                        ),
-                                        const Column(
-                                          children: [
-                                            Text("PTS"),
-                                            hBox5,
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    wBox25,
-                                    SizedBox(
-                                      height: 25,
-                                      child: Image.asset(
-                                          "assets/images/flag/netherlands_flag.png"),
-                                    ),
-                                  ],
+                              ],
+                            ),
+                             Text("RedBull Racing",style:  Theme.of(context).textTheme.bodySmall),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "265",
+                                  style:
+                                      Theme.of(context).textTheme.displayMedium,
                                 ),
+                                const Text("PTS"),
                                 hBox5,
                               ],
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    wBox8,
-                    Expanded(
-                      flex: 4,
-                      // fit: FlexFit.tight,
-                      child: SizedBox(
-                        height: size.height * 0.15,
-                        width: size.height * 0.15,
-                        child: Stack(
-                          children: [
-                            Image.asset('assets/images/team_logo/redbull.png'),
-                            Image.asset(
-                              driverImageList[0],
+                            wBox25,
+                            SizedBox(
+                              height: 25,
+                              child: Image.asset(
+                                  "assets/images/flag/netherlands_flag.png"),
                             ),
+                            hBox5,
                           ],
                         ),
-                      ),
+                        wBox8,
+                        SizedBox(
+                          height: size.height * 0.15,
+                          width: size.height * 0.15,
+                          child: Stack(
+                            children: [
+                              Image.asset(
+                                  'assets/images/team_logo/redbull.png'),
+                              Image.asset(
+                                driverImageList[0],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 )
               ],
             ),
