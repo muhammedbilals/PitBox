@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 enum AppTheme { darkTheme, lightTheme }
 
@@ -95,7 +94,7 @@ final appThemeData = {
     colorScheme: const ColorScheme.dark(),
   ),
   AppTheme.lightTheme: ThemeData(
-    fontFamily: GoogleFonts.montserrat(color: Colors.black).fontFamily,
+    fontFamily: 'Montserrat',
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.white,
     secondaryHeaderColor: Colors.black,

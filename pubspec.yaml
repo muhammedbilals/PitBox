@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^5.0.0
   flutter_svg: ^2.0.6
   shared_preferences: ^2.1.1
   bloc: ^8.1.2
@@ -19,10 +18,10 @@ dependencies:
   get_it: ^7.6.0
   dartz: ^0.10.1
   connectivity_plus: ^4.0.1
-  http: ^1.0.0
   internet_connection_checker: ^1.0.0+1
   dio: ^5.1.2
   html: ^0.15.3
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:

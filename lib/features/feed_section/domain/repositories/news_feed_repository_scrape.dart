@@ -14,7 +14,7 @@ class NewsFeedScrapedRepository {
       response = await dio.get(newsUrl);
       final html = parser.parse(response.data);
 
-      List<String>? headlineList = html
+      List<String?> headlineList = html
           .querySelectorAll(
               'div > div.row.js-load-more-container > div > a > div.f1-cc--caption > p.no-margin.f1--s')
           .map((element) => element.text)
@@ -30,6 +30,7 @@ class NewsFeedScrapedRepository {
           .map((element) => element.attributes['href'])
           .toList();
 
+      log(imageUrlList.toString());
       List<NewsFeedScraped>? newsDataList = [];
 
       for (int i = 0; i < headlineList.length; i++) {
