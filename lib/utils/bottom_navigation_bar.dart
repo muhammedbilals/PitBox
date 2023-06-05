@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pit_box/core/constant/colors.dart';
 import 'package:pit_box/core/constant/custom_icons.dart';
+import 'package:pit_box/features/calender_section/pages/race_calender_page.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/home_page.dart';
 import 'package:pit_box/features/profile_section/presentation/profile_screen.dart';
 
@@ -19,9 +20,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   late int navbarIndex = widget.pageIndex;
 
   final _pages = [
-    HomePage(),
+    const HomePage(),
     ChampionShipScreen(),
-     HomePage(),
+    const RaceCalenderScreen(),
     const ProfileSceen(),
   ];
 
