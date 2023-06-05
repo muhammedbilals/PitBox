@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pit_box/core/constant/custom_icons.dart';
@@ -254,40 +255,25 @@ class HomePage extends StatelessWidget {
                                         width: size.width * 0.9,
                                         height: size.width * 0.55,
                                         child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            child: Image.network(
-                                                newsDataList[index].imageUrl!)),
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: bRadius10),
-                                          child: Image.asset(
-                                              'assets/images/skysportslogo.png'),
-                                        ),
-                                        const Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              horizontal: bRadius10),
-                                          child: Text(
-                                            '12 Days ago',
-                                            style: TextStyle(
-                                                fontSize: fsize12,
-                                                fontWeight: FontWeight.w500),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child: CachedNetworkImage(
+                                            imageUrl:
+                                                newsDataList[index].imageUrl!,
+                                            placeholder: (context, url) =>
+                                                const CircularProgressIndicator(),
+                                            errorWidget:
+                                                (context, url, error) => Center(
+                                              child: Row(
+                                                children: [
+                                                  const Icon(Icons.error),
+                                                  Text(error)
+                                                ],
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                        const Spacer(),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: bRadius10),
-                                          child: GestureDetector(
-                                              child: CustomIcons.share),
-                                        )
-                                      ],
+                                      ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(bRadius10),
@@ -298,81 +284,7 @@ class HomePage extends StatelessWidget {
                                             fontWeight: FontWeight.w600),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding: EdgeInsets.only(left: bRadius10),
-                                      child: Text(
-                                        'Citing safety concerns due to weather and flooding, F1 has canceled the 2023 Emilia Romagna Grand Prix',
-                                        style: TextStyle(
-                                            fontSize: fsize12,
-                                            fontWeight: FontWeight.w400),
-                                      ),
-                                    ),
                                     hBox12,
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon: CustomIcons.like),
-                                        SizedBox(
-                                          width: size.width * 0.03,
-                                          child: const Text(
-                                            '1',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          child: IconButton(
-                                              onPressed: () {},
-                                              icon: CustomIcons.dislike),
-                                        ),
-                                        SizedBox(
-                                          width: size.width * 0.03,
-                                          child: const Text(
-                                            '2',
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon: CustomIcons.comment),
-                                        const Text(
-                                          '32',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                              left: size.width * 0.155,
-                                              right: 10),
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                color: colorgreen),
-                                            width: size.width * 0.24,
-                                            height: size.width * 0.07,
-                                            child: const Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  'READ MORE',
-                                                  style: TextStyle(
-                                                      fontSize: 12,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
                                   ],
                                 ),
                               ),
