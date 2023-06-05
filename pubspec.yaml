@@ -37,12 +37,12 @@ flutter:
     - assets/images/drivers/
     - assets/images/flag/
     - assets/images/team_logo/
-    - assets/fonts/CustomIcon.ttf
+    - assets/fonts/
 
   fonts:
-  - family: CustomIcon
+  - family: BoxIcon
     fonts:
-      - asset: assets/fonts/CustomIcon.ttf
+      - asset: assets/BoxIcon.ttf
   - family: Montserrat
     fonts:
       - asset: assets/fonts/montserrat/Montserrat-Thin.ttf

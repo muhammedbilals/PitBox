@@ -19,12 +19,12 @@ final appThemeData = {
       displayMedium: TextStyle(
         fontSize: 36,
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: Color.fromARGB(255, 255, 0, 0),
       ),
       displaySmall: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.bold,
-        color: Colors.white,
+        color: Color.fromARGB(255, 255, 0, 0),
       ),
       headlineLarge: TextStyle(
         fontSize: 24,
@@ -52,7 +52,7 @@ final appThemeData = {
         color: Colors.white,
       ),
       titleSmall: TextStyle(
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: FontWeight.w300,
         color: Colors.white,
       ),

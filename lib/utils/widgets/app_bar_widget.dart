@@ -21,7 +21,7 @@ class AppBarWidget extends StatelessWidget {
           IconButton(
             icon: leadingIcon == true
                 ? GestureDetector(
-                    child: CustomIcons.award,
+                    child: CustomIcons.arrowLeft,
                   )
                 : SizedBox(
                     width: size.width * 0.1,
