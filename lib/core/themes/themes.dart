@@ -99,7 +99,7 @@ final appThemeData = {
     primaryColor: Colors.white,
     primaryColorLight: Colors.black.withOpacity(0.7),
     secondaryHeaderColor: Colors.black,
-    canvasColor: Colors.white,
+    canvasColor: const Color.fromARGB(255, 235, 235, 235),
     textTheme: const TextTheme(
       displayLarge: TextStyle(
         fontSize: 35,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pit_box/core/constant/colors.dart';
-import 'package:pit_box/core/constant/custom_icons.dart';
+import 'package:pit_box/core/icons/box_icon_icons.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String title;
@@ -21,7 +21,13 @@ class AppBarWidget extends StatelessWidget {
           IconButton(
             icon: leadingIcon == true
                 ? GestureDetector(
-                    child: CustomIcons.arrowLeft,
+                    // child: SvgPicture.asset(
+                    //   'assets/icons/arrow_left.svg',
+                    //   color: Theme.of(context).secondaryHeaderColor,
+                    // ),
+                    child: const Icon(
+                      BoxIcon.arrow_left,
+                    ),
                   )
                 : SizedBox(
                     width: size.width * 0.1,

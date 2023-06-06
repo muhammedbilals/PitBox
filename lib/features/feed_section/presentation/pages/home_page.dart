@@ -1,12 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pit_box/core/constant/custom_icons.dart';
 import 'package:pit_box/core/constant/size.dart';
 import 'package:pit_box/core/constant/colors.dart';
 import 'package:pit_box/core/constant/sized_box.dart';
 import 'package:pit_box/features/feed_section/presentation/pages/news_detailed_screen.dart';
 import 'package:pit_box/features/feed_section/presentation/scrape_bloc/scrape_bloc.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,210 +20,271 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
                 height: 100,
               ),
-              Container(
-                width: size.width * 0.95,
-                height: size.height * 0.21,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).canvasColor,
-                    borderRadius: BorderRadius.circular(bRadius10)),
-                child: Padding(
-                  padding: const EdgeInsets.all(bRadius5),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Flexible(
-                            flex: 6,
-                            child: FittedBox(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: bRadius10),
-                                    child: Text(
-                                      '02 - 04 JUN',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall,
+              Center(
+                child: Container(
+                  width: size.width * 0.95,
+                  height: size.height * 0.21,
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).canvasColor,
+                      borderRadius: BorderRadius.circular(bRadius10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(bRadius5),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Flexible(
+                              flex: 6,
+                              child: FittedBox(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: bRadius10),
+                                      child: Text(
+                                        '02 - 04 JUN',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleSmall,
+                                      ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: bRadius10),
-                                    child: Text(
-                                      'SPAIN 2023',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineLarge,
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: bRadius10),
+                                      child: Text(
+                                        'SPAIN 2023',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineLarge,
+                                      ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: bRadius10),
-                                    child: Text(
-                                      'PRACTICE 3',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall,
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: bRadius10),
+                                      child: Text(
+                                        'PRACTICE 3',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleSmall,
+                                      ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.only(left: bRadius5),
-                                    child: Row(
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  horizontal: bRadius5),
-                                              child: Text(
-                                                '02',
-                                                style: TextStyle(
-                                                  fontSize: 35,
-                                                  fontWeight: FontWeight.w900,
-                                                  color: Color.fromARGB(
-                                                      255, 255, 0, 0),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: bRadius5),
+                                      child: Row(
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              const Padding(
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: bRadius5),
+                                                child: Text(
+                                                  '02',
+                                                  style: TextStyle(
+                                                    fontSize: 35,
+                                                    fontWeight: FontWeight.w900,
+                                                    color: Color.fromARGB(
+                                                        255, 255, 0, 0),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Text(
-                                              'HRS',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .labelSmall,
-                                            ),
-                                          ],
-                                        ),
-                                        Text(
-                                          ':',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .displaySmall,
-                                        ),
-                                        Column(
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  horizontal: bRadius5),
-                                              child: Text(
-                                                '23',
-                                                style: TextStyle(
-                                                  fontSize: 35,
-                                                  fontWeight: FontWeight.w900,
-                                                  color: Color.fromARGB(
-                                                      255, 255, 0, 0),
+                                              Text(
+                                                'HRS',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .labelSmall,
+                                              ),
+                                            ],
+                                          ),
+                                          Text(
+                                            ':',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .displaySmall,
+                                          ),
+                                          Column(
+                                            children: [
+                                              const Padding(
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: bRadius5),
+                                                child: Text(
+                                                  '23',
+                                                  style: TextStyle(
+                                                    fontSize: 35,
+                                                    fontWeight: FontWeight.w900,
+                                                    color: Color.fromARGB(
+                                                        255, 255, 0, 0),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Text(
-                                              'MIN',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .labelSmall,
-                                            ),
-                                          ],
-                                        ),
-                                        Text(
-                                          ':',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .displaySmall,
-                                        ),
-                                        Column(
-                                          children: [
-                                            const Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  horizontal: bRadius5),
-                                              child: Text(
-                                                '37',
-                                                style: TextStyle(
-                                                  fontSize: 35,
-                                                  fontWeight: FontWeight.w900,
-                                                  color: Color.fromARGB(
-                                                      255, 255, 0, 0),
+                                              Text(
+                                                'MIN',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .labelSmall,
+                                              ),
+                                            ],
+                                          ),
+                                          Text(
+                                            ':',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .displaySmall,
+                                          ),
+                                          Column(
+                                            children: [
+                                              const Padding(
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: bRadius5),
+                                                child: Text(
+                                                  '37',
+                                                  style: TextStyle(
+                                                    fontSize: 35,
+                                                    fontWeight: FontWeight.w900,
+                                                    color: Color.fromARGB(
+                                                        255, 255, 0, 0),
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                            Text(
-                                              'SEC',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .labelSmall,
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Flexible(
-                            flex: 7,
-                            child: Padding(
-                              padding: const EdgeInsets.all(bRadius10),
-                              child: SizedBox(
-                                height: size.width * 0.36,
-                                width: size.width * 0.4,
-                                child: FittedBox(
-                                  fit: BoxFit.contain,
-                                  child: Image.asset(
-                                      'assets/images/spaintrack.png'),
+                                              Text(
+                                                'SEC',
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .labelSmall,
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
                             ),
-                          )
-                        ],
-                      )
-                    ],
+                            Flexible(
+                              flex: 7,
+                              child: Padding(
+                                padding: const EdgeInsets.all(bRadius10),
+                                child: SizedBox(
+                                  height: size.width * 0.36,
+                                  width: size.width * 0.4,
+                                  child: FittedBox(
+                                    fit: BoxFit.contain,
+                                    child: Image.asset(
+                                        'assets/images/spaintrack.png'),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.red,
-                      height: 100,
-                    ),
-                  ),
-                  Flexible(
-                    flex: 2,
-                    child: Container(
-                      color: Colors.green,
-                      height: 100,
-                    ),
-                  ),
-                  Flexible(
-                    flex: 5,
-                    child: Container(
-                      color: Colors.blue,
-                      height: 100,
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     Flexible(
+              //       flex: 1,
+              //       child: Container(
+              //         color: Colors.red,
+              //         height: 100,
+              //       ),
+              //     ),
+              //     Flexible(
+              //       flex: 2,
+              //       child: Container(
+              //         color: Colors.green,
+              //         height: 100,
+              //       ),
+              //     ),
+              //     Flexible(
+              //       flex: 5,
+              //       child: Container(
+              //         color: Colors.blue,
+              //         height: 100,
+              //       ),
+              //     ),
+              //   ],
+              // ),
               BlocBuilder<ScrapeBloc, ScrapeState>(
                 builder: (context, state) {
                   if (state is ScrapeDataLoadingState) {
                     context.read<ScrapeBloc>().add(LoadScrapeDataEvent());
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
+                    return Column(
+                        children: List.generate(
+                      3,
+                      (index) => Column(
+                        children: [
+                          hBox20,
+                          Shimmer(
+                            child: Container(
+                              width: size.width * 0.90,
+                              height: size.height * 0.23,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Theme.of(context)
+                                    .secondaryHeaderColor
+                                    .withOpacity(
+                                      0.1,
+                                    ),
+                              ),
+                            ),
+                          ),
+                          hBox12,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(left: size.width * 0.05),
+                                child: Shimmer(
+                                  child: Container(
+                                    width: 70,
+                                    height: 25,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(
+                                            0.1,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          hBox5,
+                          Shimmer(
+                            child: Container(
+                              height: size.height * 0.05,
+                              width: size.width * 0.9,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Theme.of(context)
+                                    .secondaryHeaderColor
+                                    .withOpacity(
+                                      0.1,
+                                    ),
+                              ),
+                            ),
+                          ),
+                          hBox12,
+                        ],
+                      ),
+                    ));
                   }
                   if (state is ScrapeDataErrorState) {
                     return Center(
@@ -239,10 +302,10 @@ class HomePage extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => NewsDetailedScreen(
-                                  headLine: newsDataList[index].headLine!,
-                                  imageUrl: newsDataList[index].imageUrl!,
-                                  articleLink: newsDataList[index].articleLink!
-                                ),
+                                    headLine: newsDataList[index].headLine!,
+                                    imageUrl: newsDataList[index].imageUrl!,
+                                    articleLink:
+                                        newsDataList[index].articleLink!),
                               ),
                             );
                           },
@@ -256,25 +319,64 @@ class HomePage extends StatelessWidget {
                                       padding: const EdgeInsets.all(bRadius10),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Hero(tag: 'image_${newsDataList[index].imageUrl!}',
-                                          child: CachedNetworkImage(
-                                            imageUrl:
-                                                newsDataList[index].imageUrl!,
-                                            placeholder: (context, url) =>
-                                                const CircularProgressIndicator(),
-                                            errorWidget: (context, url, error) =>
-                                                Center(
-                                              child: Row(
-                                                children: [
-                                                  const Icon(Icons.error),
-                                                  Text(error)
-                                                ],
+                                        child: Hero(
+                                          tag:
+                                              'image_${newsDataList[index].imageUrl!}',
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Theme.of(context)
+                                                  .secondaryHeaderColor
+                                                  .withOpacity(0.2),
+                                            ),
+                                            child: CachedNetworkImage(
+                                              imageUrl:
+                                                  newsDataList[index].imageUrl!,
+                                              placeholder: (context, url) =>
+                                                  Shimmer(
+                                                child: Container(
+                                                  height: size.height * 0.23,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                    color: Theme.of(context)
+                                                        .secondaryHeaderColor
+                                                        .withOpacity(
+                                                          0.1,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              errorWidget:
+                                                  (context, url, error) =>
+                                                      Center(
+                                                child: Row(
+                                                  children: [
+                                                    const Icon(Icons.error),
+                                                    Text(error.toString()),
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ),
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: size.width * 0.025),
+                                          child: SvgPicture.asset(
+                                            'assets/images/f1_logo.svg',
+                                            width: 70,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    hBox5,
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: bRadius10),
