@@ -5,7 +5,11 @@ import '../../../../core/constant/size.dart';
 import '../../../../core/icons/custom_icon_icons.dart';
 
 class NewsDetailedScreen extends StatelessWidget {
-  const NewsDetailedScreen({super.key});
+  const NewsDetailedScreen(
+      {super.key, required this.headLine, required this.imageUrl});
+
+  final String headLine;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +18,7 @@ class NewsDetailedScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(50),
-            child: AppBarWidget(title: 'My Orders')),
+            preferredSize: Size.fromHeight(50), child: AppBarWidget(title: '')),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -24,7 +27,7 @@ class NewsDetailedScreen extends StatelessWidget {
               height: size.width * 0.7,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.asset('assets/images/newsimg.png')),
+                  child: Image.network(imageUrl)),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,18 +49,16 @@ class NewsDetailedScreen extends StatelessWidget {
                 const Spacer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: bRadius10),
-                  child: GestureDetector(child: Icon(CustomIcon.like)),
+                  child: GestureDetector(child: const Icon(CustomIcon.like)),
                 )
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.all(bRadius10),
+            Padding(
+              padding: const EdgeInsets.all(bRadius10),
               child: Text(
-                'F1 announces the cancellation of the Emilia Romagna Grand Prix',
-                style: TextStyle(
-                    color: colorwhite,
-                    fontSize: fsize20,
-                    fontWeight: FontWeight.w900),
+                headLine,
+                style: const TextStyle(
+                    fontSize: fsize20, fontWeight: FontWeight.w800),
               ),
             ),
             const Padding(

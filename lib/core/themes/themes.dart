@@ -97,12 +97,14 @@ final appThemeData = {
     fontFamily: 'Montserrat',
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.white,
+    primaryColorLight: Colors.black.withOpacity(0.7),
     secondaryHeaderColor: Colors.black,
+    canvasColor: Colors.white,
     textTheme: const TextTheme(
       displayLarge: TextStyle(
-        fontSize: 48,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
+        fontSize: 35,
+        fontWeight: FontWeight.w900,
+        color: Color.fromARGB(255, 255, 0, 0),
       ),
       displayMedium: TextStyle(
         fontSize: 36,
@@ -141,7 +143,7 @@ final appThemeData = {
       ),
       titleSmall: TextStyle(
         fontSize: 16,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w300,
         color: Colors.black,
       ),
       bodyLarge: TextStyle(
@@ -167,12 +169,11 @@ final appThemeData = {
         color: Colors.black,
       ),
       labelSmall: TextStyle(
-        fontSize: 12,
+        fontSize: 11,
         fontWeight: FontWeight.bold,
         color: Colors.black,
       ),
     ),
-    canvasColor: Colors.white70,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: Colors.black,
       unselectedItemColor: Colors.black,

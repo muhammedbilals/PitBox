@@ -62,19 +62,22 @@ class ChampionShipScreen extends StatelessWidget {
                                   color: Theme.of(context).primaryColor),
                               strokeWidth: 3,
                             ),
-                            const Column(
+                            Column(
                               children: [
                                 Text(
                                   "VERSTAPPEN",
                                   style: TextStyle(
                                     fontSize: 26,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color: Theme.of(context)
+                                        .bottomNavigationBarTheme
+                                        .selectedItemColor,
                                   ),
                                 ),
                               ],
                             ),
-                             Text("RedBull Racing",style:  Theme.of(context).textTheme.bodySmall),
+                            Text("RedBull Racing",
+                                style: Theme.of(context).textTheme.bodySmall),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [

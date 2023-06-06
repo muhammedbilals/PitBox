@@ -26,7 +26,7 @@ class RaceCalenderScreen extends StatelessWidget {
                 style: TextStyle(color: colorwhite),
               ),
               Icon(
-                CustomIcon.search,
+                CustomIcon.ps5,
                 color: colorwhite,
               )
             ],
