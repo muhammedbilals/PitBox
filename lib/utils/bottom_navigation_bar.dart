@@ -44,6 +44,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                         .bottomNavigationBarTheme
                         .unselectedItemColor!)
                 : SvgPicture.asset(
+                    
                     "assets/icons/document_filled.svg",
                     color: Theme.of(context)
                         .bottomNavigationBarTheme
