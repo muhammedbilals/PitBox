@@ -39,7 +39,9 @@ class RaceWeekendDetails extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w300,
-                            color: colorwhite.withOpacity(0.5)),
+                            color: Theme.of(context)
+                                .secondaryHeaderColor
+                                .withOpacity(0.5)),
                       ),
                     ),
                     Row(
@@ -76,7 +78,9 @@ class RaceWeekendDetails extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
-                            color: colorwhite.withOpacity(0.5)),
+                            color: Theme.of(context)
+                                .secondaryHeaderColor
+                                .withOpacity(0.5)),
                       ),
                     ),
                   ],
@@ -135,7 +139,9 @@ class RaceWeekendDetails extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
-                                      color: colorwhite.withOpacity(0.5)),
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
                                 )
                               ],
                             ),
@@ -171,7 +177,9 @@ class RaceWeekendDetails extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
-                                      color: colorwhite.withOpacity(0.5)),
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
                                 )
                               ],
                             ),
@@ -203,7 +211,9 @@ class RaceWeekendDetails extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
-                                      color: colorwhite.withOpacity(0.5)),
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
                                 )
                               ],
                             ),
@@ -240,7 +250,9 @@ class RaceWeekendDetails extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w600,
-                                      color: colorwhite.withOpacity(0.5)),
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
                                 ),
                               ],
                             ),
@@ -290,7 +302,9 @@ class RaceWeekendDetails extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
-                                color: colorwhite.withOpacity(0.5)),
+                                color: Theme.of(context)
+                                    .secondaryHeaderColor
+                                    .withOpacity(0.5)),
                           )
                         ],
                       ),
@@ -302,10 +316,10 @@ class RaceWeekendDetails extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          Text(
                             'Charles Leclerc',
                             style: TextStyle(
-                                color: colorwhite,
+                                color: Theme.of(context).secondaryHeaderColor,
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500),
                           ),
@@ -315,7 +329,9 @@ class RaceWeekendDetails extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
-                                color: colorwhite.withOpacity(0.5)),
+                                color: Theme.of(context)
+                                    .secondaryHeaderColor
+                                    .withOpacity(0.5)),
                           )
                         ],
                       ),

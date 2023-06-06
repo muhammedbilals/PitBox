@@ -49,6 +49,7 @@ class RaceCalenderScreen extends StatelessWidget {
                             ));
                       },
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
                             width: size.width * 0.88,
@@ -94,8 +95,9 @@ class RaceCalenderScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 13,
                                               fontWeight: FontWeight.w600,
-                                              color:
-                                                  colorwhite.withOpacity(0.5)),
+                                              color: Theme.of(context)
+                                                  .secondaryHeaderColor
+                                                  .withOpacity(0.5)),
                                         ),
                                       ),
                                       Padding(
@@ -106,8 +108,9 @@ class RaceCalenderScreen extends StatelessWidget {
                                           style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w300,
-                                              color:
-                                                  colorwhite.withOpacity(0.5)),
+                                              color: Theme.of(context)
+                                                  .secondaryHeaderColor
+                                                  .withOpacity(0.5)),
                                         ),
                                       ),
                                     ]),

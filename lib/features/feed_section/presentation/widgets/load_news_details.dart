@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:html/parser.dart' as parser;
+import 'package:shimmer_animation/shimmer_animation.dart';
 import '../../../../core/constant/size.dart';
 import '../../../../core/icons/box_icon_icons.dart';
 import '../../domain/entities/load_news_details.dart';
@@ -47,8 +48,6 @@ class _LoadNewsDetailsWidgetState extends State<LoadNewsDetailsWidget> {
           .map((element) => element.text)
           .toList();
 
-      log(paragraphList.toString());
-
       setState(() {
         newsDataList = LoadNewsDetails(
             timeString: timeString[0], paragraphList: paragraphList);
@@ -61,8 +60,65 @@ class _LoadNewsDetailsWidgetState extends State<LoadNewsDetailsWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     if (newsDataList == null) {
-      return const CircularProgressIndicator();
+      return Center(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: bRadius10),
+                  child: Shimmer(
+                    child: Container(
+                      height: 15,
+                      width: 90,
+                      color: Theme.of(context)
+                          .secondaryHeaderColor
+                          .withOpacity(0.1),
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: bRadius10),
+                  child: Shimmer(
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      color: Theme.of(context)
+                          .secondaryHeaderColor
+                          .withOpacity(0.1),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Shimmer(
+              child: Container(
+                height: size.width * 0.1,
+                width: size.width * 0.95,
+                color: Theme.of(context).secondaryHeaderColor.withOpacity(0.1),
+              ),
+            ),
+            Column(
+                children: List.generate(
+              4,
+              (index) => Padding(
+                padding: const EdgeInsets.all(bRadius10),
+                child: Shimmer(
+                  child: Container(
+                    height: size.width * 0.2,
+                    color:
+                        Theme.of(context).secondaryHeaderColor.withOpacity(0.1),
+                  ),
+                ),
+              ),
+            ))
+          ],
+        ),
+      );
     }
     return Column(
       children: [
