@@ -83,15 +83,17 @@ class HomePage extends StatelessWidget {
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: bRadius5),
+                                            const Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: bRadius5),
                                               child: Text(
                                                 '02',
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .displayLarge,
+                                                style: TextStyle(
+                                                  fontSize: 35,
+                                                  fontWeight: FontWeight.w900,
+                                                  color: Color.fromARGB(
+                                                      255, 255, 0, 0),
+                                                ),
                                               ),
                                             ),
                                             Text(
@@ -110,15 +112,17 @@ class HomePage extends StatelessWidget {
                                         ),
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: bRadius5),
+                                            const Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: bRadius5),
                                               child: Text(
                                                 '23',
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .displayLarge,
+                                                style: TextStyle(
+                                                  fontSize: 35,
+                                                  fontWeight: FontWeight.w900,
+                                                  color: Color.fromARGB(
+                                                      255, 255, 0, 0),
+                                                ),
                                               ),
                                             ),
                                             Text(
@@ -137,15 +141,17 @@ class HomePage extends StatelessWidget {
                                         ),
                                         Column(
                                           children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: bRadius5),
+                                            const Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: bRadius5),
                                               child: Text(
                                                 '37',
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .displayLarge,
+                                                style: TextStyle(
+                                                  fontSize: 35,
+                                                  fontWeight: FontWeight.w900,
+                                                  color: Color.fromARGB(
+                                                      255, 255, 0, 0),
+                                                ),
                                               ),
                                             ),
                                             Text(
@@ -232,51 +238,43 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    const NewsDetailedScreen(),
+                                builder: (context) => NewsDetailedScreen(
+                                  headLine: newsDataList[index].headLine!,
+                                  imageUrl: newsDataList[index].imageUrl!,
+                                ),
                               ),
                             );
                           },
                           child: Padding(
                             padding: const EdgeInsets.all(10),
                             child: Center(
-                              child: Container(
-                                width: size.width * 0.95,
-                                height: size.height * 0.5,
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.circular(bRadius10),
-                                    color: Theme.of(context).canvasColor),
+                              child: IntrinsicHeight(
                                 child: Column(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(bRadius10),
-                                      child: SizedBox(
-                                        width: size.width * 0.9,
-                                        height: size.width * 0.55,
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          child: CachedNetworkImage(
-                                            imageUrl:
-                                                newsDataList[index].imageUrl!,
-                                            placeholder: (context, url) =>
-                                                const CircularProgressIndicator(),
-                                            errorWidget:
-                                                (context, url, error) => Center(
-                                              child: Row(
-                                                children: [
-                                                  const Icon(Icons.error),
-                                                  Text(error)
-                                                ],
-                                              ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: CachedNetworkImage(
+                                          imageUrl:
+                                              newsDataList[index].imageUrl!,
+                                          placeholder: (context, url) =>
+                                              const CircularProgressIndicator(),
+                                          errorWidget: (context, url, error) =>
+                                              Center(
+                                            child: Row(
+                                              children: [
+                                                const Icon(Icons.error),
+                                                Text(error)
+                                              ],
                                             ),
                                           ),
                                         ),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(bRadius10),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: bRadius10),
                                       child: Text(
                                         newsDataList[index].headLine!,
                                         style: const TextStyle(
