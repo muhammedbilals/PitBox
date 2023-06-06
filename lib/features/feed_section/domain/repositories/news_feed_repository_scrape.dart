@@ -30,7 +30,6 @@ class NewsFeedScrapedRepository {
           .map((element) => element.attributes['href'])
           .toList();
 
-      log(imageUrlList.toString());
       List<NewsFeedScraped>? newsDataList = [];
 
       for (int i = 0; i < headlineList.length; i++) {

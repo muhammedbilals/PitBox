@@ -241,6 +241,7 @@ class HomePage extends StatelessWidget {
                                 builder: (context) => NewsDetailedScreen(
                                   headLine: newsDataList[index].headLine!,
                                   imageUrl: newsDataList[index].imageUrl!,
+                                  articleLink: newsDataList[index].articleLink!
                                 ),
                               ),
                             );
@@ -255,18 +256,20 @@ class HomePage extends StatelessWidget {
                                       padding: const EdgeInsets.all(bRadius10),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: CachedNetworkImage(
-                                          imageUrl:
-                                              newsDataList[index].imageUrl!,
-                                          placeholder: (context, url) =>
-                                              const CircularProgressIndicator(),
-                                          errorWidget: (context, url, error) =>
-                                              Center(
-                                            child: Row(
-                                              children: [
-                                                const Icon(Icons.error),
-                                                Text(error)
-                                              ],
+                                        child: Hero(tag: 'image_${newsDataList[index].imageUrl!}',
+                                          child: CachedNetworkImage(
+                                            imageUrl:
+                                                newsDataList[index].imageUrl!,
+                                            placeholder: (context, url) =>
+                                                const CircularProgressIndicator(),
+                                            errorWidget: (context, url, error) =>
+                                                Center(
+                                              child: Row(
+                                                children: [
+                                                  const Icon(Icons.error),
+                                                  Text(error)
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ),
