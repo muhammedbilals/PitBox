@@ -22,6 +22,7 @@ dependencies:
   dio: ^5.1.2
   html: ^0.15.3
   cached_network_image: ^3.2.3
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
