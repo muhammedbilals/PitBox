@@ -12,7 +12,6 @@ class RaceWeekendDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return SafeArea(
       child: Scaffold(
         appBar: const PreferredSize(
@@ -61,10 +60,14 @@ class RaceWeekendDetails extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: bRadius5),
                           child: SizedBox(
-                              height: size.width * 0.09,
-                              width: size.width * 0.1,
+                            height: size.width * 0.09,
+                            width: size.width * 0.1,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(bRadius10),
                               child: Image.asset(
-                                  'assets/images/flag/netherlands_flag.png')),
+                                  'assets/images/flag/netherlands_flag.png'),
+                            ),
+                          ),
                         )
                       ],
                     ),
@@ -256,10 +259,11 @@ class RaceWeekendDetails extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DriverDetails(),
-                    ));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DriverDetails(),
+                  ),
+                );
               },
               child: Container(
                 padding:
@@ -290,8 +294,8 @@ class RaceWeekendDetails extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
-                                color: colorwhite.withOpacity(0.5)),
-                          )
+                                color: colorwhite.withOpacity(0.5),),
+                          ),
                         ],
                       ),
                     ),
@@ -313,9 +317,10 @@ class RaceWeekendDetails extends StatelessWidget {
                           Text(
                             '2019',
                             style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
-                                color: colorwhite.withOpacity(0.5)),
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: colorwhite.withOpacity(0.5),
+                            ),
                           )
                         ],
                       ),

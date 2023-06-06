@@ -38,6 +38,7 @@ flutter:
     - assets/images/flag/
     - assets/images/team_logo/
     - assets/fonts/
+    - assets/images/splash/
 
   fonts:
   - family: BoxIcon
