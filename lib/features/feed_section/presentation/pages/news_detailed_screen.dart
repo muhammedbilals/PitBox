@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:pit_box/core/icons/box_icon_icons.dart';
 import 'package:pit_box/utils/widgets/app_bar_widget.dart';
 import '../widgets/load_news_details.dart';
 
@@ -21,7 +22,11 @@ class NewsDetailedScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(50), child: AppBarWidget(title: '')),
+            preferredSize: Size.fromHeight(50),
+            child: AppBarWidget(
+                title: '',
+                icons: Icon(BoxIcon.more_circle),
+                leadingIcon: true)),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

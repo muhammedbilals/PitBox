@@ -37,7 +37,7 @@ class RaceWeekendDetails extends StatelessWidget {
                         '02 - 04 JUN',
                         style: TextStyle(
                             fontSize: 15,
-                            fontWeight: FontWeight.w300,
+                            fontWeight: FontWeight.w400,
                             color: Theme.of(context)
                                 .secondaryHeaderColor
                                 .withOpacity(0.5)),
@@ -350,7 +350,239 @@ class RaceWeekendDetails extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
+            hBox5,
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(bRadius25),
+                width: size.width * 0.9,
+                height: size.width * 0.52,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).canvasColor,
+                  borderRadius: BorderRadius.circular(bRadius10),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: size.width * 0.12,
+                            height: size.width * 0.12,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    '23',
+                                    style: TextStyle(
+                                        color: colorwhite,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w900),
+                                  ),
+                                  Text(
+                                    'JUL',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w600,
+                                        color: Theme.of(context)
+                                            .secondaryHeaderColor
+                                            .withOpacity(0.5)),
+                                  ),
+                                ]),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            height: size.width * 0.12,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Practice 1',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
+                                ),
+                                const Text(
+                                  '17 : 00 -18 : 00',
+                                  style: TextStyle(
+                                      color: colorwhite,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            height: size.width * 0.12,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Practice 2',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
+                                ),
+                                const Text(
+                                  '17 : 00 -15 : 00',
+                                  style: TextStyle(
+                                      color: colorwhite,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          )
+                        ]),
+                    hBox5,
+                    Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: size.width * 0.12,
+                            height: size.width * 0.12,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    '24',
+                                    style: TextStyle(
+                                        color: colorwhite,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w900),
+                                  ),
+                                  Text(
+                                    'JUL',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w600,
+                                        color: Theme.of(context)
+                                            .secondaryHeaderColor
+                                            .withOpacity(0.5)),
+                                  ),
+                                ]),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            height: size.width * 0.12,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Practice 1',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
+                                ),
+                                const Text(
+                                  '17 : 00 -18 : 00',
+                                  style: TextStyle(
+                                      color: colorwhite,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            height: size.width * 0.12,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Practice 2',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: Theme.of(context)
+                                          .secondaryHeaderColor
+                                          .withOpacity(0.5)),
+                                ),
+                                const Text(
+                                  '17 : 00 -15 : 00',
+                                  style: TextStyle(
+                                      color: colorwhite,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          )
+                        ]),
+                    Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: size.width * 0.12,
+                            height: size.width * 0.12,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    '25',
+                                    style: TextStyle(
+                                        color: colorgreen,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w900),
+                                  ),
+                                  Text(
+                                    'JUL',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w600,
+                                        color: Theme.of(context)
+                                            .secondaryHeaderColor
+                                            .withOpacity(0.5)),
+                                  ),
+                                ]),
+                          ),
+                          SizedBox(
+                            width: size.width * 0.32,
+                            height: size.width * 0.12,
+                            child: const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Race',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w600,
+                                      color: colorgreen),
+                                ),
+                                Text(
+                                  '18 : 30',
+                                  style: TextStyle(
+                                      color: colorwhite,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ]),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
